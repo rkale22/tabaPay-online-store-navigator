@@ -56,9 +56,9 @@ The application was developed incrementally, with each part building upon the pr
 - **Approach**: Enhanced the `Content` component to display data in a structured manner when a category is selected.
 - **Visualization**: Utilized Material UI's `Accordion` components within the content area to organize and present large amounts of data for each category.
 - **Advantages**:
-  - **Intuitive**: Users can easily expand and collapse sections to view details as needed.
-  - **Technically Sound**: Leveraged Material UI components effectively for a clean and responsive design.
-  - **Time-Efficient**: Quick to implement, aligning with time constraints while meeting functionality requirements.
+  -  Users can easily expand and collapse sections to view details as needed.
+  -  Leveraged Material UI components effectively for a clean and responsive design.
+  -  Quick to implement, aligning with time constraints while meeting functionality requirements.
 
 **Future Enhancement Proposal:**
 To further enhance the application's usability and scalability, the following features can be implemented:
