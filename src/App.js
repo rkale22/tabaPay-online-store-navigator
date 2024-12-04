@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
+import Content from './Content';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Box } from '@mui/material';
 
 
@@ -18,8 +19,15 @@ function App() {
 
   return (
     <Box sx={{ display: 'flex', height: '100vh' }}>
-      <Sidebar onCategorySelect={handleCategorySelect} />
-
+      {/* Sidebar */}
+      <Box sx={{ width: '250px', borderRight: '1px solid #ccc' }}>
+        <Sidebar onCategorySelect={handleCategorySelect} />
+      </Box>
+      {/* Content Area */}
+      <Box sx={{ flexGrow: 1 }}>
+        <Content selectedCategory={selectedCategory} />
+      </Box>
+      {/* Modal Dialog */}
       <Dialog open={isDialogOpen} onClose={handleCloseDialog}>
         <DialogTitle>Category Selected</DialogTitle>
         <DialogContent>
