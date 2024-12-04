@@ -43,7 +43,7 @@ const categories = [
   },
 ];
 
-function Sidebar() {
+function Sidebar({ onCategorySelect }) {
   const [openNodes, setOpenNodes] = useState({});
 
   const handleToggle = (nodeId, parentId) => {
@@ -115,6 +115,8 @@ function Sidebar() {
       const handleClick = () => {
         if (hasChildren) {
           handleToggle(category.id, parentId);
+        } else {
+          onCategorySelect(category);
         }
       };
 
@@ -122,6 +124,7 @@ function Sidebar() {
         <div key={category.id}>
           <ListItemButton onClick={handleClick} sx={{ pl: depth * 2 }}>
             <ListItemIcon>
+              <Folder />
             </ListItemIcon>
             <ListItemText primary={category.name} />
             {hasChildren ? (isOpen ? <ExpandLess /> : <ExpandMore />) : null}
